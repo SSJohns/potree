@@ -10,13 +10,13 @@
 	<script src="../libs/other/stats.min.js"></script>
 	<script src="../libs/other/dat.gui.min.js"></script>
 	<script src="../libs/other/BinaryHeap.js"></script>
-	
+
 	<script src="../build/js/potree.js"></script>
 	<script src="./js/ProgressBar.js"></script>
-	
-	
+
+
 	<!-- uncomment this to debug changes to the individual js files -->
-	<!--
+
 	<script src="../src/PointCloudOctree.js"></script>
 	<script src="../src/PointCloudOctreeGeometry.js"></script>
 	<script src="../src/loader/POCLoader.js"></script>
@@ -36,27 +36,27 @@
 	<script src="../src/Features.js"></script>
 	<script src="../src/arena4d/PointCloudArena4D.js"></script>
 	<script src="../src/arena4d/PointCloudArena4DGeometry.js"></script>
-	-->
-	
-	
-	
+
+
+
+
 	<!-- INCLUDE ADDITIONAL DEPENDENCIES HERE -->
 	<!-- INCLUDE SETTINGS HERE -->
 	<script src="../libs/plasio/js/laslaz.js"></script>
 	<script src="../libs/plasio/vendor/bluebird.js"></script>
 	<script src="../build/js/laslaz.js"></script>
-	
-	
+
+
 	<!-- HEADING -->
 	<div class="info" style="position: absolute; left: 300px; right: 300px; top: 10px; text-align: center;">
 		<a href="http://potree.org" target="_blank">potree.org</a>
 	</div>
-	
+
 	<!-- INFOS / STATS -->
 	<div id="lblNumVisibleNodes" class="info" style="position: absolute; left: 10px; top: 80px; width: 400px; color:white"></div>
 	<div id="lblNumVisiblePoints" class="info" style="position: absolute; left: 10px; top: 100px; width: 400px; color:white"></div>
 	<div id="lblMessage" class="info" style="position: absolute; left: 10px; bottom: 0px; width: 400px; color:white"></div>
-	
+
 	<!-- TOOLS -->
 	<div id="tools" style="position: fixed; width: 400px; bottom: 10px; right: 10px">
 		<img src="../resources/icons/earth_controls_1.png" onclick="useEarthControls()" title="Earth Controls"/>
@@ -71,11 +71,11 @@
 		<img src="../resources/icons/profile.png" onclick="profileTool.startInsertion({width: pointcloud.boundingSphere.radius / 100})" title="height profiles"/>
 		<img src="../resources/icons/clip_volume.png" onclick="volumeTool.startInsertion({clip: true})" title="clipping volumes"/>
 	</div>
-	
+
 	<div id="renderArea"></div>
-	
+
 	<script>
-		
+
 		var sceneProperties = {
 			path:			"../resources/pointclouds/lion_takanawa_laz/cloud.js",
 			cameraPosition: null,
@@ -86,11 +86,13 @@
 			material: 		"RGB", 				// options: "RGB", "Height", "Intensity", "Classification"
 			pointLimit: 	1,					// max number of points in millions
 			navigation: 	"Orbit",			// options: "Earth", "Orbit", "Flight"
-			pointSize: 		1.2,	
+			pointSize: 		1.2,
 			useEDL:			false,				// eye-dome-lighting, especially usefull for point clouds without normals
 		};
 	</script>
+
+	<script src="./js/StereoEffect.js"></script>
 	<script src="./js/viewer.js"></script>
-	
+
 </body>
 </html>
